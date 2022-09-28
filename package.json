@@ -8,7 +8,8 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js",
     "lint": "npx eslint \"**/*.js\"",
-    "lint:fix": "npx eslint \"**/*.js\" --fix"
+    "lint:fix": "npx eslint \"**/*.js\" --fix",
+    "db:sync": "node db/sync"
   },
   "keywords": [],
   "author": "",
@@ -24,10 +25,5 @@
     "handlebars-async-helpers": "^1.0.4",
     "mysql2": "^2.3.3",
     "sequelize": "^6.23.2"
-  },
-  "devDependencies": {
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
   }
 }
