@@ -16,6 +16,10 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false, 
     },
+    character_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -24,16 +28,11 @@ Character.init(
       type: DataTypes.INTEGER,
       allowNull: false, 
     },
-    category_id : {
-      references:{
-        model: "category",
-        key: "id"
-      }
-    }
   },
   {
     sequelize,
     underscored: true,
+    timestamps: false, 
     modelName: "character"
   }
 )
