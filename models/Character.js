@@ -20,6 +20,10 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    health: {
+      type: DataTypes.INTEGER,
+      allowNull: false, 
+    },
     category_id : {
       references:{
         model: "category",
