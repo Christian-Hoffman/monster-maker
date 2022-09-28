@@ -1,5 +1,6 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { User, Character, Weapon } = require('../models');
+
 
 const userData = require('./userData.json');
 
@@ -10,6 +11,15 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+
+  await Character.bulkCreate([{name: "Something", character_type: "Something", description: "Something", health: 45,}], {
+    individualHooks: true,
+    returning: true, 
+  })
+  await Weapon.bulkCreate([{name: "Something", damage: 8324}], {
+    individualHooks: true,
+    returning: true, 
+  })
 
   // for (const project of projectData) {
   //   await Project.create({
