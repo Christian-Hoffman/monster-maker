@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Green Dragon",
+    "character_type": "Boss",
+    "description": "Green dragons were most notable for the large, waving crest or fin that started at the dragon's nose and ran the entire length of the dragon's body. They also had exceptionally long, slender forked tongues.",
+    "health": 250,
+    "user_id": 1
+  },
+  {
+    "name": "Hobgoblin",
+    "character_type": "Normal",
+    "description": "A hobgoblin measures virtue by physical strength and martial prowess, caring about nothing except skill and cunning in battle.",
+    "health": 19
+  },
+  {
+    "name": "Stray Demon",
+    "character_type": "MiniBoss",
+    "description": " a large demon with a body made of rock wielding a large stone greathammer",
+    "health": 100
+  }
+]
