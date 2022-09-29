@@ -1,0 +1,17 @@
+:root {
+  --light: #ebebeb;
+  --dark: #394b61;
+  --lightdark: #243447;
+}
+
+body,
+div,
+#login-card{
+  background-color: var(--dark);
+  color: var(--light);
+};
+
+nav {
+  color: var(--light);
+  text-decoration: none !important;
+}
