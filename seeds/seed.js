@@ -3,20 +3,22 @@ const { User, Character, Weapon } = require('../models');
 
 
 const userData = require('./userData.json');
+const charData = require('./charData.json');
+const weaponData = require('./weaponData.json');
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-
   await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  await Character.bulkCreate([{name: "Something", character_type: "Something", description: "Something", health: 45,}], {
+  await Character.bulkCreate(charData, {
     individualHooks: true,
     returning: true, 
   })
-  await Weapon.bulkCreate([{name: "Something", damage: 8324}], {
+  await Weapon.bulkCreate(weaponData, {
     individualHooks: true,
     returning: true, 
   })
