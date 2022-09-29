@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {User} = require("../models");
 
 router.get('/', (req, res) => {
-  res.render('index');
+  res.render('homepage');
 });
 
 module.exports = router;
