@@ -1,43 +1,46 @@
 <div class="card">
   <h5 class="card-header text-center fs-1" id="featmon">Create A Monsters</h5>
   <div class="card-body d-flex justify-content-center">
-    <form class="card col-5 d-flex justify-content-center">
+    <form class="card col-5 d-flex justify-content-center" id="createMonster">
 
       <div class="col-12 align-self-center p-3">
         <select
           class="form-select p-3 mb-3"
           aria-label="Default select example"
+          id="monster"
         >
           <option selected>Monster</option>
-          <option value="1">Green Dragon</option>
-          <option value="2">Hobgoblin</option>
-          <option value="3">Stray Demon</option>
+          <option value="Green Dragon">Green Dragon</option>
+          <option value="Hobgoblin">Hobgoblin</option>
+          <option value="Stray Demon">Stray Demon</option>
         </select>
         <select
           class="form-select p-3 mb-3"
           aria-label="Default select example"
+          id="type"
         >
           <option selected>Type</option>
-          <option value="1">Boss</option>
-          <option value="2">MiniBoss</option>
-          <option value="3">Normal</option>
+          <option value="Boss">Boss</option>
+          <option value="MiniBoss">MiniBoss</option>
+          <option value="Normal">Normal</option>
         </select>
         <select
           class="form-select p-3 mb-3"
           aria-label="Default select example"
+          id="weapon"
         >
           <option selected>Weapon</option>
-          <option value="3">Unarmed</option>
-          <option value="1">Gladius</option>
-          <option value="2">Straight Sword</option>
-          <option value="3">Fire Staff</option>
+          <option value="Unarmed">Unarmed</option>
+          <option value="Gladius">Gladius</option>
+          <option value="Straight Sword">Straight Sword</option>
+          <option value="Fire Staff">Fire Staff</option>
         </select>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Enter a
+          <label for="description" class="form-label" >Enter a
             Description for your Monster</label>
           <textarea
             class="form-control"
-            id="exampleFormControlTextarea1"
+            id="description"
             rows="3"
           ></textarea>
         </div>
@@ -50,12 +53,15 @@
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-lg"
             placeholder="Enter a number between 1-150"
+            id="health"
           />
         </div>
         <div class="col-12 mt-4 text-center">
-          <button class="btn btn-primary btn-lg" type="submit">Create Monster</button>
+          <button class="btn btn-primary btn-lg" type="submit" >Create Monster</button>
         </div>
-      </div>
+      </div> 
     </form>
   </div>
 </div>
+
+<script src="js/createMonster.js"></script>

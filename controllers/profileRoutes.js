@@ -22,7 +22,6 @@ profile.get('/', auth, async (req, res) => {
   if(data){
  
 const userStats = JSON.parse(JSON.stringify(data));
-console.log("user Stats", userStats);
   // res.send(userStats);
 
   res.render("profile", {userStats, isOnline: req.session.isOnline});
