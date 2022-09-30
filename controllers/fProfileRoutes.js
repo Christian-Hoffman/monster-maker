@@ -11,15 +11,18 @@ router.get('/:username', async (req, res) => {
                 "monster", 
                 "character_type",
                 "description",
+                "weapons",
                 "health",
+                "user_id",
               ]}, 
             ]
   });
-  console.log("Data:", data );
   if(data){
+ 
 const userStats = JSON.parse(JSON.stringify(data));
 console.log("user Stats", userStats);
   // res.send(userStats);
+
   res.render("profile", {userStats});
   }
   else{
