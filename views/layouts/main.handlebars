@@ -14,14 +14,53 @@
   </head>
   <header>
     <h1>Monster Maker</h1>
-    <nav>
-      <a href="">Home</a>
-      <a href="">Login</a>
-      <a href="">MonsterMaker</a>
-      <a href="">Explore</a>
-    </nav>
   </header>
   <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid fill-height">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse position-relative fs-4"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Create Monster</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Monsters</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        {{#if isOnline}}
+        <li class="nav-item">
+          <a class="nav-link" href="/login" id="logout">Logout</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
     {{{body}}}
 
     <script
@@ -34,6 +73,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <script src="js/logout.js"></script>
 
   </body>
 </html>

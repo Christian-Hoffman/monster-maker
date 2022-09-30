@@ -7,22 +7,21 @@ router.get("/", async (req, res) =>{
 })
 
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res) => { //SignUp
   try {
     const userData = await User.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
-    });
+    req.session.user_id = userData.id;
+    req.session.isOnline = true;
+    
+    req.session.save();
+    res.status(200).json(userData);
   } catch (err) {
     res.status(400).json(err);
+    throw err;
   }
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => { //Login
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -41,24 +40,34 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
+    const updatedUserData = User.update({isOnline: true}, {
+      where: {
+        email: req.body.email,
+      }
+    })
+    req.session.user_id = userData.id;
+    req.session.isOnline = true;
+    req.session.save();
       res.json({ user: userData, message: 'You are now logged in!' });
-    });
 
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
+router.post('/logout', (req, res) => {  //LogOut
+
+  if (req.session.isOnline) {
+    console.log(true);
     req.session.destroy(() => {
-      res.status(204).end();
+      
     });
+    const updatedUserData = User.update({isOnline: false}, {
+     where:{
+      isOnline: true,
+     } 
+    });
+    res.status(204).end();
   } else {
     res.status(404).end();
   }
