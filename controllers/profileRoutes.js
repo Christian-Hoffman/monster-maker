@@ -1,8 +1,9 @@
 const profile = require('express').Router();
+const auth = require("../utils/auth");
 const {User, Character} = require("../models");
 
 
-profile.get('/', async (req, res) => {
+profile.get('/', auth, async (req, res) => {
   const data = await User.findOne({
     where: {
       isOnline: true
