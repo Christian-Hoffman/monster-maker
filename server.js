@@ -35,11 +35,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`listening at http://localhost:${PORT}`);
     // Creates a temporary directory if it doesn't exist
     const dir = path.join(__dirname, 'tmp/');
-    // if (!existsSync(dir)) mkdirSync(dir, 0744);
+    if (!existsSync(dir)) mkdirSync(dir, 0744);
   });
 });
