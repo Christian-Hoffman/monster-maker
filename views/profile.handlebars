@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="card-header fs-1 text-center">'username here'</div>
+  <div class="card-header fs-1 text-center">{{userStats.name}}</div>
   <div class="card-body row justify-content-center">
 
     <div class="card col-lg-3 px-3">
@@ -46,7 +46,7 @@
   </div>
 
   <div class="card">
-    <h5 class="card-header text-center fs-1">{{userStats.name}} Hello World Monsters</h5>
+    <h5 class="card-header text-center fs-1">{{userStats.name}}'s Monsters</h5>
     <div class="card-body d-flex justify-content-center flex-wrap">
       <section class="pt-5 px-5">
         {{#each userStats.characters}}
@@ -58,16 +58,16 @@
           />
           
           <div class="card-body">
-            <h5 class="card-title">{{monster}}</h5>
-            <p class="card-text">{{description}}</p>
+            <h5 class="card-title">Monster: {{monster}}</h5>
+            <p class="card-text">Description: {{description}}</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{character_type}}</li>
-            <li class="list-group-item">Weapon</li>
-            <li class="list-group-item">Health</li>
+            <li class="list-group-item">Character Type: {{character_type}}</li>
+            <li class="list-group-item">Weapons: {{weapons}}</li>
+            <li class="list-group-item">Health: {{health}}</li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Created by: </a>
+            <a href="#" class="card-link">Created by: {{user_id}}</a>
           </div>
         </div>
         {{/each}}
