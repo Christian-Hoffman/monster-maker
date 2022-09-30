@@ -6,12 +6,19 @@
 
 body,
 div,
-#login-card{
-  background-color: var(--dark);
+#login-card,
+#featmon,
+.card {
+  background-color: var(--lightdark);
   color: var(--light);
-};
+  border: 0px solid;
+  text-align: center;
+}
 
-nav {
-  color: var(--light);
-  text-decoration: none !important;
+#moncard {
+  border: 2px white solid;
+}
+
+.fill-height {
+  height: 100%;
 }
