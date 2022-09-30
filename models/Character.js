@@ -12,7 +12,7 @@ Character.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    monster: {
       type: DataTypes.STRING,
       allowNull: false, 
     },
