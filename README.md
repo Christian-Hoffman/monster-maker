@@ -19,7 +19,7 @@ Additional Frameworks: Bootstrap 5.2
 ## Installation
 In the terminal, at the root level, run "npm i" to install the following dependencies.
 
-Dependencies: express, express-handlebars, express-session, handlebars handlebars-async-helpers, sequelize, connect-session-sequelize, mysql2, bcrypt, dotenv
+Dependencies: express, express-handlebars, express-session, handlebars handlebars-async-helpers, sequelize, connect-session-sequelize, mysql2, bcrypt, dotenv, multer, and cloudinary
 
 Following npm install, run "mysql -u root -p" to enter sequel shell. When prompted enter password, then run "exit" to leave sequel shell. 
 
