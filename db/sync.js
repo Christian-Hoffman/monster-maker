@@ -6,7 +6,7 @@ const { DB_NAME } = process.env;
 (async () => {
   try {
     const statement = `CREATE DATABASE IF NOT EXISTS ${DB_NAME}`;
-    const db = await mysql.createConnection(process.env.JAWDB_URL || 'mysql://root@127.0.0.1:3306');
+    const db = await mysql.createConnection(process.env.PORT? `mysql://root@localhost:${process.env.PORT}` : 'mysql://root@127.0.0.1:3306');
     await db.execute(statement);
     console.log(`${DB_NAME} created`);
     process.exit();
