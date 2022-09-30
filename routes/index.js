@@ -7,7 +7,7 @@ const db = require('../models');
 router.post('/api/upload', upload, async (req, res) => {
   const { file } = req;
   // Captures the file data from the upload process and sends it to Cloudinary
-  const result = await uploadToCloudinary(file.path, { folder: 'bootcamp-101' });
+  const result = await uploadToCloudinary(file.path, { folder: 'Monster Maker' });
   // When the upload is complete, delete it from the /tmp directory
   if (file && result) unlinkSync(file.path);
   // Create object using data from the file and result object from Cloudinary
