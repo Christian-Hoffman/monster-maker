@@ -4,7 +4,6 @@ const { User, Character, Weapon } = require('../models');
 
 const userData = require('./userData.json');
 const charData = require('./charData.json');
-const weaponData = require('./weaponData.json');
 
 
 const seedDatabase = async () => {
@@ -15,10 +14,6 @@ const seedDatabase = async () => {
   });
 
   await Character.bulkCreate(charData, {
-    individualHooks: true,
-    returning: true, 
-  })
-  await Weapon.bulkCreate(weaponData, {
     individualHooks: true,
     returning: true, 
   })
