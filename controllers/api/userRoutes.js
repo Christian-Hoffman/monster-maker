@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => { //Login
 });
 
 router.post('/logout', (req, res) => {  //LogOut
-
+  try{
   if (req.session.isOnline) {
     console.log(true);
     req.session.destroy(() => {
@@ -70,6 +70,11 @@ router.post('/logout', (req, res) => {  //LogOut
   } else {
     res.status(404).end();
   }
+}
+catch(err){
+  console.log(err);
+  res.json(err);
+}
 });
 
 module.exports = router;

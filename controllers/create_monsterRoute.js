@@ -3,10 +3,17 @@ const { User, Character } = require("../models");
 const auth = require("../utils/auth");
 
 router.get('/', auth, (req, res) => {
+  try{
   res.render('create_monster', { isOnline: req.session.isOnline });
+  }
+  catch(err){
+    console.log(err);
+    res.json(err);
+  }
 });
 
 router.post("/", async (req, res) => {
+  try{
   const userData = await User.findOne({ 
     where:{
       isOnline: true
@@ -20,7 +27,11 @@ router.post("/", async (req, res) => {
   
   const data = Character.create(req.body)  
   res.redirect("/profile");
-
+  }
+  catch(err){
+    console.log(err);
+    res.json(err);
+  }
 })
 
 
