@@ -1,0 +1,28 @@
+<div class="card">
+  <h5 class="card-header text-center fs-1" id="featmon">All Created Monsters</h5>
+</div>
+<div class="row d-flex flex-wrap justify-content-center">
+  {{#each monsters}}
+    <section class="col-3 pt-5 px-5">
+      <div class="card" id="moncard">
+        <img
+          src="https://via.placeholder.com/200"
+          class="card-img-top"
+          alt="monster pic"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{monster}}</h5>
+          <p class="card-text" style="height: 150px;">{{description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{character_type}}</li>
+          <li class="list-group-item">{{weapons}}</li>
+          <li class="list-group-item">{{health}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Created by: </a>
+        </div>
+      </div>
+    </section>
+  {{/each}}
+</div>

@@ -5,6 +5,9 @@ const loginRoutes = require('./loginRoutes');
 const profileRoutes = require('./profileRoutes');
 const create_monsterRoutes = require('./create_monsterRoute');
 const fProfileRoutes = require("./fProfileRoutes")
+const monsterRoutes = require("./monsters.js");
+
+
 
 router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
@@ -12,5 +15,7 @@ router.use('/login', loginRoutes);
 router.use('/profile', profileRoutes);
 router.use('/create_monster', create_monsterRoutes);
 router.use("/public_profiles", fProfileRoutes);
+router.use("/monsters", monsterRoutes);
+
 
 module.exports = router;
