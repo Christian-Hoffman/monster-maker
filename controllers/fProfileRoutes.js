@@ -2,6 +2,7 @@ const router = require('express').Router();
 const {User, Character, Weapon} = require("../models");
 
 router.get('/:username', async (req, res) => {
+  try{
   const data = await User.findOne({
     where: {
       name: req.params.username,
@@ -17,17 +18,18 @@ router.get('/:username', async (req, res) => {
               ]}, 
             ]
   });
-  if(data){
- 
+
 const userStats = JSON.parse(JSON.stringify(data));
 console.log("user Stats", userStats);
   // res.send(userStats);
 
   res.render("profile", {userStats});
-  }
-  else{
-    res.json({message: "Something went wrong"});
-  }
+
+}
+catch(err){
+  console.log(err);
+  res.json(err);
+}
 });
 
 module.exports = router;

@@ -2,6 +2,7 @@ const router = require('express').Router();
 const {User, Character} = require("../models");
 
 router.get('/', async(req, res) => {
+  try{
   let monsterData = await Character.findAll()
   monsterData = JSON.parse(JSON.stringify(monsterData));
   const features = [];
@@ -19,6 +20,11 @@ router.get('/', async(req, res) => {
 
   console.log(features);
   res.render('homepage', {isOnline: req.session.isOnline, features});
+}
+catch(err){
+  console.log(err);
+  res.json(err);
+}
 });
 
 module.exports = router;
