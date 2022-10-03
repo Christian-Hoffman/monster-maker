@@ -1,9 +1,13 @@
 const router = require('express').Router();
-const {User, Character} = require("../models");
+const {User, Character, Image} = require("../models");
 
 router.get('/', async(req, res) => {
   try{
-  let monsterData = await Character.findAll()
+  let monsterData = await Character.findAll({
+    include:{ 
+    model: Image,
+  }
+  })
   monsterData = JSON.parse(JSON.stringify(monsterData));
   const features = [];
 
@@ -17,9 +21,12 @@ router.get('/', async(req, res) => {
     randomFeature1 = Math.floor(Math.random()* monsterData.length);
   }
   features.push(monsterData[randomFeature1], monsterData[randomFeature2], monsterData[randomFeature3], );
+
+
   let userData = await User.findAll();
   userData = JSON.parse(JSON.stringify(userData));
 
+  console.log(features);
   res.render('homepage', {isOnline: req.session.isOnline, features, userData});
 }
 catch(err){

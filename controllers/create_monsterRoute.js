@@ -30,6 +30,7 @@ router.post("/", async (req, res) => {
   req.body.user_id = serialUserData.id;
   req.body.username = serialUserData.name;
   
+
   Character.create(req.body)  
   res.redirect("/profile");
   }
