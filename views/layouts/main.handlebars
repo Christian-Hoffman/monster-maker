@@ -9,9 +9,15 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Monster Maker</title>
   </head>
   <header>
@@ -52,6 +58,8 @@
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
+
+
             <li class="nav-item">
               <a class="nav-link text-white" href="/profile">Profile</a>
             </li>
@@ -68,6 +76,18 @@
                 <a class="nav-link text-white" href="/login">Login</a>
               </li>
             {{/if}}
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn-secondary btn-outline-primary"
+                type="submit"
+              >Search</button>
+            </form>
           </ul>
         </div>
       </div>
@@ -84,7 +104,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
-    <script src="js/logout.js"></script>
+    <script src="/js/logout.js"></script>
 
   </body>
 </html>

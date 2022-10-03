@@ -4,7 +4,7 @@ const homeRoutes = require('./homeRoutes');
 const loginRoutes = require('./loginRoutes');
 const profileRoutes = require('./profileRoutes');
 const create_monsterRoutes = require('./create_monsterRoute');
-const fProfileRoutes = require("./fProfileRoutes")
+const fProfileRoutes = require("./fProfileRoutes");
 const monsterRoutes = require("./monsters.js");
 
 
