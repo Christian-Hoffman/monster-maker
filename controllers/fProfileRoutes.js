@@ -19,12 +19,14 @@ router.get('/:username', async (req, res) => {
           "weapons",
           "health",
           "user_id",
+          "username"
         ]
       },
       ]
     });
 
     const userStats = JSON.parse(JSON.stringify(data));
+    console.log(userStats);
     res.render("profile", { userStats, isOnline: req.session.isOnline, userData });
   }
   catch (err) {

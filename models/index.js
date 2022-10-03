@@ -14,7 +14,7 @@ Character.belongsTo(User, {
   foreignKey: "user_id"
 });
 
-Character.hasMany(Image, {
+Character.hasOne(Image, {
   foreignKey: "character_id",
   onDelete: "CASCADE"
 });
