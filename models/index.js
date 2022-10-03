@@ -1,5 +1,6 @@
 const User = require('./User');
 const Character = require('./Character');
+const Images = require('./images');
 
 
 
@@ -12,6 +13,11 @@ User.hasMany(Character, {
 Character.belongsTo(User, {
   foreignKey: "user_id"
 })
+
+Images.belongsTo(Character, {
+  foreignKey: "character_id"
+})
+
 
 
 
