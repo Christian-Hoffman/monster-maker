@@ -2,9 +2,9 @@
   <h5 class="card-header text-center fs-1" id="featmon">{{userStats.name}}'s
     Monsters</h5>
 </div>
-<div class="row d-flex flex-wrap justify-content-center">
+<div class="row d-flex flex-wrap justify-content-center p-4">
   {{#each userStats.characters}}
-    <section class="col-lg-3 col-md-6 pt-5 px-3">
+    <section class="col-lg-4 col-md-6 pt-5 px-3">
       <div class="card" id="moncard">
         <img
           src="https://via.placeholder.com/150"
@@ -14,7 +14,7 @@
 
         <div class="card-body">
           <h5 class="card-title">{{monster}}</h5>
-          <p class="card-text" style="height: 200px;">Description: {{description}}</p>
+          <p class="card-text" style="height: 200px;">{{description}}</p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Character Type:
