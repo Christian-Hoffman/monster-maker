@@ -22,8 +22,13 @@ router.post("/", async (req, res) => {
       exclude: ["password"]
     }
    });
+  //  const username = await User
+
+
+
   const serialUserData = JSON.parse(JSON.stringify(userData));
   req.body.user_id = serialUserData.id;
+  req.body.username = serialUserData.name;
   
   const data = Character.create(req.body)  
   res.redirect("/profile");
