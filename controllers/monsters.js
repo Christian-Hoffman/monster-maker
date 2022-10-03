@@ -11,7 +11,7 @@ router.get("/", async (req, res) =>{
 
   console.log(monsters);
 
-  res.render("monsters", {monsters})
+  res.render("monsters", {monsters, isOnline: req.session.isOnline})
   }
   catch(err){
     console.log(err);
