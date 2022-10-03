@@ -2,9 +2,12 @@ const router = require('express').Router();
 const { User, Character } = require("../models");
 const auth = require("../utils/auth");
 
-router.get('/', auth, (req, res) => {
+router.get('/', auth, async (req, res) => {
   try{
-  res.render('create_monster', { isOnline: req.session.isOnline });
+  let userData = await User.findAll();
+  userData = JSON.parse(JSON.stringify(userData));
+  
+  res.render('create_monster', { isOnline: req.session.isOnline, userData });
   }
   catch(err){
     console.log(err);
