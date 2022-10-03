@@ -9,7 +9,7 @@
 6. [Contributing](#contributing)
 
 ## Description
-[Link to Deployed Site on Heroku]()
+[Link to Deployed Site on Heroku](https://monster-maker01.herokuapp.com/) \
 This application will allow a user to dynamically create, customize, and display monsters to be able to put them into a game such as DnD. Monsters can be generated from a variety of categories, including options for weapon choice.
 
 Via an authentication process, a user can login to view their profile, and the mosters they have personally created. Users without an account will be able to view the database, however the creation feature is limited to logged-in users. This application aims to provide the user with a clean UI and a visually polished space to create and store content.
@@ -41,8 +41,8 @@ This application is licensed with the MIT License.
 ## Contributing 
 Team members:
 
-<a href="https://github.com/Zachattack221">Zach van Dijk</a>
-<a href="https://github.com/Revilite">Jacob Lockhart</a>
+<a href="https://github.com/Zachattack221">Zach van Dijk</a> \
+<a href="https://github.com/Revilite">Jacob Lockhart</a> \
 <a href="https://github.com/Christian-Hoffman">Christian Hoffman</a>
-<a href="https://github.com/gfinnie01">Grant Finnie </a>
+<a href="https://github.com/gfinnie01">Grant Finnie </a> \
 <a href="https://github.com/Apowers9">Andrew Powers</a>
