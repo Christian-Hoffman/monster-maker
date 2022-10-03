@@ -43,6 +43,6 @@ Team members:
 
 <a href="https://github.com/Zachattack221">Zach van Dijk</a> \
 <a href="https://github.com/Revilite">Jacob Lockhart</a> \
-<a href="https://github.com/Christian-Hoffman">Christian Hoffman</a>
-<a href="https://github.com/gfinnie01">Grant Finnie </a> \
+<a href="https://github.com/Christian-Hoffman">Christian Hoffman</a> \
+<a href="https://github.com/gfinnie01">Grant Finnie</a> \
 <a href="https://github.com/Apowers9">Andrew Powers</a>

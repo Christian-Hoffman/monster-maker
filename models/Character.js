@@ -1,20 +1,20 @@
-const {Model, DataTypes} = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Character extends Model {}
+class Character extends Model { }
 
 
 Character.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false, 
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     monster: {
       type: DataTypes.STRING,
-      allowNull: false, 
+      allowNull: false,
     },
     character_type: {
       type: DataTypes.STRING,
@@ -26,7 +26,7 @@ Character.init(
     },
     health: {
       type: DataTypes.INTEGER,
-      allowNull: false, 
+      allowNull: false,
     },
     weapons: {
       type: DataTypes.STRING,
@@ -36,7 +36,7 @@ Character.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id:{
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
@@ -47,7 +47,8 @@ Character.init(
   {
     sequelize,
     underscored: true,
-    timestamps: false, 
+    timestamps: false,
+    freezeTableName: true,
     modelName: "character"
   }
 )

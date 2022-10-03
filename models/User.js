@@ -28,9 +28,9 @@ User.init(
         isEmail: true,
       },
     },
-    isOnline:{
+    isOnline: {
       type: DataTypes.BOOLEAN,
-      allowNull: false, 
+      allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
