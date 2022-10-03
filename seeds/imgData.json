@@ -2,16 +2,19 @@
   {
     "name": "image_sa6sts",
     "image_id": "v1664551444",
-    "character_id": 3
+    "character_id": [2],
+    "title": "Stray Demon"
   },
   {
-    "name": "image_1_qwvp9a",
+    "name": "image_1_qwvp9a", 
     "image_id": "v1664551441",
-    "character_id": 1
+    "character_id": [1],
+    "title": "Green Dragon"
   },
   {
-    "name": "image_2_sppvug",
-    "image_id": "v1664551433",
-    "character_id": 2
+    "name": "something_i5op4w", 
+    "image_id": "v1664826296",
+    "character_id": [3],
+    "title": "Hobgoblin"
   }
 ]

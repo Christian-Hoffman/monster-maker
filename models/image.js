@@ -19,6 +19,10 @@ Image.init(
       type: DataTypes.STRING,
       allowNull:false
     },
+    title:{
+      type: DataTypes.STRING, 
+      allowNull: false
+    },
     character_id: {
       type: DataTypes.INTEGER,
       references:{
