@@ -4,6 +4,9 @@ const { User, Character } = require("../models");
 
 profile.get('/', auth, async (req, res) => {
   try {
+    let userData = await User.findAll();
+    userData = JSON.parse(JSON.stringify(userData));
+
     const data = await User.findOne({
       where: {
         isOnline: true
@@ -29,7 +32,7 @@ profile.get('/', auth, async (req, res) => {
         id: userStats.id,
       }
     })
-    res.render("profile", { userStats, isOnline: req.session.isOnline });
+    res.render("profile", { userStats, isOnline: req.session.isOnline, userData });
   }
   catch (err) {
     console.log(err);
