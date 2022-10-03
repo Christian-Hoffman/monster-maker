@@ -12,15 +12,15 @@
         />
         <div class="card-body">
           <h5 class="card-title">{{monster}}</h5>
-          <p class="card-text" style="height: 200px;">{{description}}</p>
+          <p class="card-text" style="height: 200px; font-size: 18px;">{{description}}</p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{character_type}}</li>
-          <li class="list-group-item">{{weapons}}</li>
-          <li class="list-group-item">{{health}}</li>
+          <li class="list-group-item">Type: {{character_type}}</li>
+          <li class="list-group-item">Weapon: {{weapons}}</li>
+          <li class="list-group-item">Health: {{health}}</li>
         </ul>
         <div class="card-body">
-          <a href="#" class="card-link">Created by: </a>
+          <a href="/public_profiles/{{username}}" class="card-link">Created by: {{username}}</a>
         </div>
       </div>
     </section>
