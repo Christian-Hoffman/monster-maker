@@ -1,32 +1,40 @@
 const profile = require('express').Router();
 const auth = require("../utils/auth");
-const {User, Character} = require("../models");
+const { User, Character } = require("../models");
 
 
 profile.get('/', auth, async (req, res) => {
-  try{
-  const data = await User.findOne({
-    where: {
-      isOnline: true
-    },
-    include: [{model: Character, 
-      attributes: [
-                "monster", 
-                "character_type",
-                "description",
-                "weapons",
-                "health",
-                "user_id",
-              ]}, 
-            ]
-  });
- 
-const userStats = JSON.parse(JSON.stringify(data));
-  // res.send(userStats);
+  try {
+    const data = await User.findOne({
+      where: {
+        isOnline: true
+      },
+      include: [{
+        model: Character,
+        attributes: [
+          "monster",
+          "character_type",
+          "description",
+          "weapons",
+          "health",
+          "user_id",
+          "username",
+        ]
+      },
+      ]
+    });
 
-  res.render("profile", {userStats, isOnline: req.session.isOnline});
+    const userStats = JSON.parse(JSON.stringify(data));
+    const username = await User.findOne({
+      where:{
+        id : userStats.id,
+      }
+    })
+    console.log(userStats);
+
+    res.render("profile", { userStats, isOnline: req.session.isOnline });
   }
-  catch(err){
+  catch (err) {
     console.log(err);
     res.json(err);
   }
