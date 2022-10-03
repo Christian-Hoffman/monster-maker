@@ -1,3 +1,9 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --light: #ebebeb;
   --lightdark: #394b61;
@@ -14,7 +20,7 @@ div,
   border: 0px solid;
   text-align: center;
   /* font-family: 'Koh Santepheap', cursive; */
-  font-family: 'Fondamento', cursive;
+  font-family: "Fondamento", cursive;
 }
 
 #moncard {
