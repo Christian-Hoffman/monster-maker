@@ -34,3 +34,7 @@ div,
 .customMargin{
   margin-top: 102px;
 }
+
+a:hover {
+  text-decoration: underline;
+}
