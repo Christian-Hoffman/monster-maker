@@ -1,7 +1,7 @@
 :root {
   --light: #ebebeb;
-  --dark: #394b61;
-  --lightdark: #243447;
+  --lightdark: #394b61;
+  --dark: #243447;
 }
 
 body,
@@ -9,10 +9,12 @@ div,
 #login-card,
 #featmon,
 .card {
-  background-color: var(--lightdark);
+  background-color: var(--dark);
   color: var(--light);
   border: 0px solid;
   text-align: center;
+  /* font-family: 'Koh Santepheap', cursive; */
+  font-family: 'Fondamento', cursive;
 }
 
 #moncard {
