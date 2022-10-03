@@ -27,11 +27,6 @@ profile.get('/', auth, async (req, res) => {
     });
 
     const userStats = JSON.parse(JSON.stringify(data));
-    await User.findOne({
-      where: {
-        id: userStats.id,
-      }
-    })
     res.render("profile", { userStats, isOnline: req.session.isOnline, userData });
   }
   catch (err) {
