@@ -18,7 +18,6 @@ router.get('/', async(req, res) => {
   }
   features.push(monsterData[randomFeature1], monsterData[randomFeature2], monsterData[randomFeature3], );
 
-  console.log(features);
   res.render('homepage', {isOnline: req.session.isOnline, features});
 }
 catch(err){

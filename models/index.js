@@ -1,6 +1,6 @@
 const User = require('./User');
 const Character = require('./Character');
-const Images = require('./images');
+const Image = require('./image');
 
 
 
@@ -14,11 +14,16 @@ Character.belongsTo(User, {
   foreignKey: "user_id"
 })
 
-Images.belongsTo(Character, {
+Character.hasOne(Image, {
+  foreignKey: "character_id",
+  onDelete: "CASCADE"
+})
+
+Image.belongsTo(Character, {
   foreignKey: "character_id"
 })
 
 
 
 
-module.exports = { User, Character };
+module.exports = { User, Character, Image };
