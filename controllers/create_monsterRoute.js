@@ -42,6 +42,13 @@ router.post("/", async (req, res) => {
       req.body.img_link = "v1664551444";
       req.body.img_name = "image_sa6sts";
       break;
+      case "Fire Elemental":
+        req.body.img_link =  "v1664894506";
+        req.body.img_name = "image_4_cggkbc";
+        break;
+      case "Ent":
+        req.body.img_link = "v1664895661";
+        req.body.img_name = "ent_lzejnz";
     default:
   }
 
