@@ -42,7 +42,16 @@ Character.init(
         model: "user",
         key: "id"
       }
+    },
+    img_link: {
+      type: DataTypes.STRING,
+      allowNull:true,
+    },
+    img_name: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
+
   },
   {
     sequelize,
