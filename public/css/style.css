@@ -23,8 +23,18 @@ div,
   font-family: "Fondamento", cursive;
 }
 
-#moncard {
+.card-body {
+  background-color: var(--lightdark);
+}
+
+#createMonPage {
+  background-color: var(--dark);
+}
+
+#moncard,
+#createMonster {
   border: 2px white solid;
+  background-color: var(--dark);
 }
 
 .fill-height {
@@ -35,6 +45,12 @@ div,
   margin-top: 102px;
 }
 
+a {
+  color: var(--light);
+  text-decoration: none;
+}
+
 a:hover {
   text-decoration: underline;
+  color: var(--light);
 }
