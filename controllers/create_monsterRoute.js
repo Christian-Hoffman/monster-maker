@@ -29,8 +29,23 @@ router.post("/", async (req, res) => {
   const serialUserData = JSON.parse(JSON.stringify(userData));
   req.body.user_id = serialUserData.id;
   req.body.username = serialUserData.name;
-  
+  switch(req.body.monster){
+    case "Green Dragon":
+      req.body.img_link = "v1664551441";
+      req.body.img_name = "image_1_qwvp9a";
+      break;
+    case "Hobgoblin":
+      req.body.img_link = "v1664826296";
+      req.body.img_name = "something_i5op4w";
+      break;
+    case "Stray Demon":
+      req.body.img_link = "v1664551444";
+      req.body.img_name = "image_sa6sts";
+      break;
+    default:
+  }
 
+  console.log(req.body);
   Character.create(req.body)  
   res.redirect("/profile");
   }

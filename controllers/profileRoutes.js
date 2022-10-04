@@ -21,6 +21,8 @@ profile.get('/', auth, async (req, res) => {
           "health",
           "user_id",
           "username",
+          "img_link",
+          "img_name"
         ]
       },
       ]

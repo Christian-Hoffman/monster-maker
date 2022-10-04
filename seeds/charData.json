@@ -6,7 +6,9 @@
     "health": 250,
     "weapons": "Unarmed",
     "user_id": 1,
-    "username": "Sal"
+    "username": "Sal",
+    "img_link":"v1664551441",
+    "img_name":"image_1_qwvp9a"
   },
   {
     "monster": "Hobgoblin",
@@ -15,7 +17,9 @@
     "health": 19,
     "weapons": "Dagger",
     "user_id": 2,
-    "username": "Lernantino"
+    "username": "Lernantino",
+    "img_link":"v1664826296",
+    "img_name":"something_i5op4w"
   },
   {
     "monster": "Stray Demon",
@@ -24,6 +28,8 @@
     "health": 100,
     "weapons": "Great Hammer",
     "user_id": 3,
-    "username": "Amiko"
+    "username": "Amiko",
+    "img_link":"v1664551444",
+    "img_name":"image_sa6sts"
   }
 ]

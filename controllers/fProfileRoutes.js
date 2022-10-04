@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const imgData = require('../models/image.js')
 const { User, Character } = require("../models");
 
 router.get('/:username', async (req, res) => {
@@ -19,15 +20,18 @@ router.get('/:username', async (req, res) => {
           "weapons",
           "health",
           "user_id",
-          "username"
+          "username",
+          "img_link",
+          "img_name"
         ]
       },
       ]
     });
 
     const userStats = JSON.parse(JSON.stringify(data));
+    userStats.characters.forEach(character=>character.name=userStats.name)
     console.log(userStats);
-    res.render("profile", { userStats, isOnline: req.session.isOnline, userData });
+    res.render("profile", { userStats, isOnline: req.session.isOnline, userData, imgData });
   }
   catch (err) {
     console.log(err);
