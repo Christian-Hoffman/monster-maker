@@ -29,6 +29,7 @@ profile.get('/', auth, async (req, res) => {
     });
 
     const userStats = JSON.parse(JSON.stringify(data));
+    userStats.characters.forEach(character=>character.name=userStats.name)
     res.render("profile", { userStats, isOnline: req.session.isOnline, userData });
   }
   catch (err) {
